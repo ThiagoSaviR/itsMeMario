@@ -28,6 +28,7 @@ export const ModalContent = styled.div`
 
 export const CloseModal = styled.img`
   position: absolute;
+
   top: -1.9rem; ;
   right: -1.9rem;
   width: 3.5rem;
@@ -35,7 +36,7 @@ export const CloseModal = styled.img`
   cursor: pointer;
   border: 0.5rem solid #21dd3a;
   border-radius: 10rem;
-  background-color: #fff;
+  background-color: #ffff;
   padding: 0.3rem;
   z-index: 2;
 `;
