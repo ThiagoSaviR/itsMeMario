@@ -15,8 +15,8 @@ export const Main = styled.div`
   align-items: center;
   justify-content: center;
 `;
-export const Paragraph = styled.img`
-  width: 50%;
+export const Title = styled.img`
+  width: 35rem;
   margin: 0 auto;
   display: block;
   padding-top: 5rem;
@@ -36,7 +36,7 @@ export const WrapperPlayer = styled.div`
   background-color: #b0cff799;
   filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
   width: 100%;
-  height: 300px;
+  height: 18.5rem;
   border: 0.5rem solid #ddbb21;
   border-radius: 1rem;
 `;

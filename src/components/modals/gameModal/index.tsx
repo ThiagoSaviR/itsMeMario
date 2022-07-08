@@ -1,7 +1,8 @@
 import React from "react";
-import { MainModal, CloseModal, ModalContent } from "./styles";
+import { MainModal, CloseModal, ModalContent, Title } from "./styles";
 
-import btnClose from "../../../assets/x.png";
+import btnClose from "../../../assets/img/x.png";
+import title from "../../../assets/img/chooseYourPlayer.png";
 
 interface IProps {
   closeModal: () => void;
@@ -11,8 +12,10 @@ const PlayerModal: React.FC<IProps> = ({ closeModal }) => {
 
   return (
     <MainModal>
+      <ModalContent>
       <CloseModal src={btnClose} onClick={closeModal} />
-      <ModalContent>Modal</ModalContent>
+        <Title src={title} />
+      </ModalContent>
     </MainModal>
   );
 };

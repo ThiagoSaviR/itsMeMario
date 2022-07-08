@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainModal = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -13,25 +13,33 @@ export const MainModal = styled.div`
   align-items: center;
 `;
 
-export const CloseModal = styled.img`
+export const ModalContent = styled.div`
   position: relative;
-  top: -12rem;
-  right: -35rem;
+  background-color: #f3f3f3;
+  filter: drop-shadow(-10px 10px 10px rgba(0, 0, 0, 0.3));
+  border: 0.5rem solid #21dd3a;
+  padding: 2rem 0;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  `;
+
+export const CloseModal = styled.img`
+  position: absolute;
+  top: -1.9rem; ;
+  right: -1.9rem;
   width: 3.5rem;
   height: 3.5rem;
   cursor: pointer;
   border: 0.5rem solid #21dd3a;
   border-radius: 10rem;
-  background-color: #fff;
+  background-color: #ffff;
   padding: 0.3rem;
-  z-index: 2;
-  `;
+`;
 
-export const ModalContent = styled.div`
-  background-color: #fff;
-  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
-  border: 0.5rem solid #21dd3a;
-  padding: 11rem 15rem;
-  border-radius: 1rem;
-  position: relative;
+export const Title = styled.img`
+  width: 60%;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
 `;

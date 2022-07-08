@@ -11,6 +11,7 @@ export const StyledButton: React.FC<ButtonProps> = styled(Button)`
   margin: 1rem;
   border-radius: 5rem;
   font-weight: bold;
+  font-size: 0.7rem;
 `;
 
 export const SecundaryStyledButton = styled(StyledButton)`

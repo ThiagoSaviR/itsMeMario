@@ -16,7 +16,7 @@ export const MainModal = styled.div`
 export const ModalContent = styled.div`
   position: relative;
   background-color: #f3f3f3;
-  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(-10px 10px 10px rgba(0, 0, 0, 0.3));
   border: 0.5rem solid #21dd3a;
   padding: 2rem 0;
   border-radius: 1rem;
@@ -28,7 +28,6 @@ export const ModalContent = styled.div`
 
 export const CloseModal = styled.img`
   position: absolute;
-
   top: -1.9rem; ;
   right: -1.9rem;
   width: 3.5rem;
@@ -38,7 +37,6 @@ export const CloseModal = styled.img`
   border-radius: 10rem;
   background-color: #ffff;
   padding: 0.3rem;
-  z-index: 2;
 `;
 
 export const Title = styled.img`
@@ -59,6 +57,7 @@ export const PlayerImage = styled.img`
   width: 10rem;
   `;
 export const Card = styled.div`
+  width:50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,10 +65,14 @@ export const Card = styled.div`
   background: #fff;
   border-radius: 1rem;
   filter: drop-shadow(-6px 6px 10px rgba(0, 0, 0, 0.3));
-  transition: 0.8s;
+  transition: 0.3s;
   &:hover {
-    transform: scale(1.06);
+    transform: scale(1.1);
   }
 
 `;
-export const Name = styled.h1``;
+export const Name = styled.h1`
+  font-size: 1.2rem;
+  font-weight: bold;  
+  margin: 1rem 0 0 0;
+`;

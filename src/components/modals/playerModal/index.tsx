@@ -10,8 +10,8 @@ import {
   Name,
 } from "./styles";
 
-import btnClose from "../../../assets/x.png";
-import title from "../../../assets/chooseYourPlayer.png";
+import btnClose from "../../../assets/img/x.png";
+import title from "../../../assets/img/chooseYourPlayer.png";
 import Button from "../../../components/button";
 
 import { PLAYERS } from "../../../players";
@@ -31,7 +31,7 @@ const PlayerModal: React.FC<IProps> = ({ closeModal }) => {
             <Card>
               <Name>{player.name}</Name>
               <PlayerImage key={player.id} src={player.image} />
-              <Button text="Select"/>
+              <Button text="Select" onclick={closeModal}/>
             </ Card>
           ))}
         </WhapperPlayer>

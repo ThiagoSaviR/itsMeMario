@@ -1,7 +1,7 @@
-import Mario from "../assets/mariohead.png";
-import MarioGif from "../assets/mario-gif.gif";
-import Yoshi from "../assets/yoshihead.png";
-import YoshiGif from "../assets/yoshi-gif.gif";
+import Mario from "../assets/img/mariohead.png";
+import MarioGif from "../assets/img/mario-gif.gif";
+import Yoshi from "../assets/img/yoshihead.png";
+import YoshiGif from "../assets/img/yoshi-gif.gif";
 
 export const PLAYERS = [
     {

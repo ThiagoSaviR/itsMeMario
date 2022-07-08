@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {
   Main,
-  Paragraph,
+  Title,
   Background,
   Wrapperbutton,
   WrapperPlayer,
@@ -9,10 +9,12 @@ import {
 } from "./styles";
 
 import PlayerModal from "../../components/modals/playerModal";
+import GameModal from "../../components/modals/gameModal";
+import RankingModal from "../../components/modals/rankingModal";
 import Button from "../../components/button";
 
-import backgroundImage from "../../assets/background.jpg";
-import logo from "../../assets/logo.png";
+import backgroundImage from "../../assets/img/background.jpg";
+import logo from "../../assets/img/logo.png";
 
 function MainPage() {
   const [displayPlayerModal, setDisplayPlayerModal] = useState(false);
@@ -22,7 +24,7 @@ function MainPage() {
   return (
     <Main>
       <Background src={backgroundImage} />
-      <Paragraph src={logo} />
+      <Title src={logo} />
       <WrapperContent>
         <Wrapperbutton>
           <Button
@@ -49,12 +51,12 @@ function MainPage() {
         />
       ) : null}
       {displayGameModal ? (
-        <PlayerModal
+        <GameModal
           closeModal={() => setDisplayGameModal(!displayGameModal)}
         />
       ) : null}
       {displayRankingModal ? (
-        <PlayerModal
+        <RankingModal
           closeModal={() => setDisplayRankingModal(!displayRankingModal)}
         />
       ) : null}
