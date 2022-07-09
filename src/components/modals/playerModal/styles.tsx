@@ -75,4 +75,5 @@ export const Name = styled.h1`
   font-size: 1.2rem;
   font-weight: bold;  
   margin: 1rem 0 0 0;
+  font-family: 'Press Start 2P', cursive;
 `;

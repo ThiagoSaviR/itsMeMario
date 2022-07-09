@@ -16,10 +16,15 @@ import Button from "../../components/button";
 import backgroundImage from "../../assets/img/background.jpg";
 import logo from "../../assets/img/logo.png";
 
+import { usePlayerContext } from "../../contexts/playerContext";
+
+
 function MainPage() {
   const [displayPlayerModal, setDisplayPlayerModal] = useState(false);
   const [displayGameModal, setDisplayGameModal] = useState(false);
   const [displayRankingModal, setDisplayRankingModal] = useState(false);
+
+  const { data } = usePlayerContext();
 
   return (
     <Main>
