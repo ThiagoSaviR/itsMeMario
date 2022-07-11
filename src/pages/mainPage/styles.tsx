@@ -32,7 +32,7 @@ export const Background = styled.img`
   z-index: -1;
 `;
 
-export const WrapperPlayer = styled.div`
+export const WrapperPainel = styled.div`
   background-color: #b0cff799;
   filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
   width: 100%;
@@ -40,3 +40,4 @@ export const WrapperPlayer = styled.div`
   border: 0.5rem solid #ddbb21;
   border-radius: 1rem;
 `;
+

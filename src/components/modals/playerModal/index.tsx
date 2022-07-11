@@ -33,7 +33,7 @@ const PlayerModal: React.FC<IProps> = ({ closeModal }) => {
         <Title src={title} />
         <WhapperPlayer>
           {PLAYERS.map((player: any) => (
-            <Card>
+            <Card key={player.id}>
               <Name>{player.name}</Name>
               <PlayerImage key={player.id} src={player.image} />
               <Button text="Select" onclick={() => handleClick(player)} />

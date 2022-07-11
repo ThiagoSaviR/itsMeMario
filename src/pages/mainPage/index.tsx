@@ -4,7 +4,7 @@ import {
   Title,
   Background,
   Wrapperbutton,
-  WrapperPlayer,
+  WrapperPainel,
   WrapperContent,
 } from "./styles";
 
@@ -12,6 +12,7 @@ import PlayerModal from "../../components/modals/playerModal";
 import GameModal from "../../components/modals/gameModal";
 import RankingModal from "../../components/modals/rankingModal";
 import Button from "../../components/button";
+import Painel from "../../components/painel";
 
 import backgroundImage from "../../assets/img/background.jpg";
 import logo from "../../assets/img/logo.png";
@@ -40,9 +41,12 @@ function MainPage() {
             text="PLAY!"
             collor="yellow"
             onclick={() => setDisplayGameModal(!displayGameModal)}
+            disabled={data.gif? false : true}
           />
         </Wrapperbutton>
-        <WrapperPlayer></WrapperPlayer>
+        <WrapperPainel>
+          <Painel />
+        </WrapperPainel>
         <Wrapperbutton>
           <Button
             text="Ranking"
