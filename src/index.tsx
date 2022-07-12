@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import 'antd/dist/antd.css'
 import App from './App';
+import { BrowserRouter } from 'react-router-dom';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
-  <React.StrictMode>
+  <BrowserRouter>
+  <Suspense fallback={<div />}>
     <App />
-  </React.StrictMode>
+  </Suspense>
+  </BrowserRouter>
 );
 

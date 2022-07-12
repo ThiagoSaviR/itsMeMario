@@ -7,9 +7,9 @@ import {
   WrapperPainel,
   WrapperContent,
 } from "./styles";
+import { useNavigate } from "react-router-dom";
 
 import PlayerModal from "../../components/modals/playerModal";
-import GameModal from "../../components/modals/gameModal";
 import RankingModal from "../../components/modals/rankingModal";
 import Button from "../../components/button";
 import Painel from "../../components/painel";
@@ -20,12 +20,13 @@ import logo from "../../assets/img/logo.png";
 import { usePlayerContext } from "../../contexts/playerContext";
 
 
-function MainPage() {
+const MainPage = () => {
+  const navigate = useNavigate();
   const [displayPlayerModal, setDisplayPlayerModal] = useState(false);
-  const [displayGameModal, setDisplayGameModal] = useState(false);
   const [displayRankingModal, setDisplayRankingModal] = useState(false);
 
   const { data } = usePlayerContext();
+
 
   return (
     <Main>
@@ -40,8 +41,10 @@ function MainPage() {
           <Button
             text="PLAY!"
             collor="yellow"
-            onclick={() => setDisplayGameModal(!displayGameModal)}
             disabled={data.gif? false : true}
+            onclick={() => {
+              navigate("/game");
+            }}
           />
         </Wrapperbutton>
         <WrapperPainel>
@@ -57,11 +60,6 @@ function MainPage() {
       {displayPlayerModal ? (
         <PlayerModal
           closeModal={() => setDisplayPlayerModal(!displayPlayerModal)}
-        />
-      ) : null}
-      {displayGameModal ? (
-        <GameModal
-          closeModal={() => setDisplayGameModal(!displayGameModal)}
         />
       ) : null}
       {displayRankingModal ? (
