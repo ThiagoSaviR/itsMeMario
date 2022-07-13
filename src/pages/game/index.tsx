@@ -1,7 +1,7 @@
 
 const Game = () => {
   return (
-   <div>game</div>
+   <div>gamepage</div>
   );
 }
 
