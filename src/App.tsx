@@ -1,5 +1,5 @@
 import GlobalStyle from "./styles/globalStyles";
-import Router from "./router/routes";
+import Router from "./router/router";
 import { PlayerProvider } from "./contexts/playerContext";
 
 
