@@ -22,6 +22,7 @@ export const Pipe = styled.img`
   position: absolute;
   bottom: 0;
   width: 5rem;
+  height: 4.5rem;
   right: -5rem;
   animation: ${pipeAnimation} 2s linear infinite;
   
