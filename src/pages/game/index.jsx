@@ -1,4 +1,4 @@
-import React, { useState, useRef, useLayoutEffect} from 'react';
+import ReactDOM, { useState, useRef, useLayoutEffect} from 'react';
 import { GameBoard, Pipe, PlayerAnimation, Player } from "./styles";
 
 import pipe from "../../assets/img/pipe.png";
@@ -15,23 +15,28 @@ const Game = () => {
         setJump(true);
         setTimeout(() => {
           setJump(false);
-        }, 700);
+        }, 600);
       }
     }
   })
 
+  const playerRef = useRef()
   const pipeRef = useRef();
   setInterval(() => {
+    const jumpPlayer = playerRef.current.offsetTop;
+    const pipePosition = pipeRef.current.offsetLeft
+
     if (data.id === 1) {
-      if (pipeRef.current.offsetLeft <= 152) {
+      if (pipePosition <= 152 && pipePosition > 40 && jumpPlayer > 290) {
         pipeRef.current.style.animation = "none"; 
-        pipeRef.current.style.left = 152 + "px";
+        pipeRef.current.style.left = pipePosition + "px";
       } 
     }
+
     if (data.id === 2) {
-      if ((pipeRef.current.offsetLeft <= 174)) {
+      if ((pipePosition <= 174 && pipePosition > 40 && jumpPlayer > 290)) {
         pipeRef.current.style.animation = "none"; 
-        pipeRef.current.style.left = 174 + "px";
+        pipeRef.current.style.left = pipePosition + "px";
       }  
     }
   },10);
@@ -39,9 +44,9 @@ const Game = () => {
   return (
     <GameBoard>
       {jump? (
-        <Player src={data.gif} animation={PlayerAnimation} />
+        <Player className="player" ref={playerRef} src={data.gif} animation={PlayerAnimation} />
       ): (
-        <Player src={data.gif} />
+        <Player className="player" ref={playerRef} src={data.gif} />
       )}
       <Pipe ref={pipeRef} className="pipe" src={pipe} alt="Pipe" />
     </GameBoard>

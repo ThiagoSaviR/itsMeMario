@@ -25,25 +25,24 @@ export const Pipe = styled.img`
   height: 4.5rem;
   right: -5rem;
   animation: ${pipeAnimation} 2s linear infinite;
-  
 `;
 
 export const PlayerAnimation = keyframes`
   0% {
-    bottom: 0;
+    top: 368px;
   }
-  40%, 50%, 60%  { 
-    bottom: 11.25rem;
+  40%, 50%, 60% { 
+    top: 200px;
   }
   100% {
-    bottom: 0;
+    top: 368px;
   }
 `;
 
 export const Player = styled.img`
     width: 8.125rem;
     position: absolute;
-    bottom: 0;
+    top: 368px;
     left: 3rem;
     animation:${props => props.animation} 600ms ease-out;
 `;
