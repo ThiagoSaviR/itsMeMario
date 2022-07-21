@@ -7,11 +7,12 @@ export const GameBoard = styled.div`
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  background:linear-gradient(#87CEEb, #E0F6FF);
 `;
 
 const pipeAnimation = keyframes`
   from {
-    rigth: -5rem;
+    right: -5rem;
   }
 
   to {
@@ -23,7 +24,6 @@ export const Pipe = styled.img`
   bottom: 0;
   width: 5rem;
   height: 4.5rem;
-  right: -5rem;
   animation: ${pipeAnimation} 2s linear infinite;
 `;
 
@@ -38,12 +38,23 @@ export const PlayerAnimation = keyframes`
     top: 368px;
   }
 `;
-
 export const Player = styled.img`
     width: 8.125rem;
     position: absolute;
     top: 368px;
     left: 3rem;
     animation:${props => props.animation} 600ms ease-out;
+    z-index: 2;
+`;
+
+export const Score = styled.p`
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem 2rem;
+  font-size: 2rem;
+  color: #fff;
+  z-index: 2;
+  text-align: center;
 `;
 

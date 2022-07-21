@@ -13,14 +13,16 @@ import {
 } from "./styles";
 
 import { usePlayerContext } from "../../contexts/playerContext";
+import { useScoreContext } from "../../contexts/scoreContext";
 
 const Painel = () => {
   const { data } = usePlayerContext();
+  const { bestScore } = useScoreContext();
   return (
     <MainPainel>
       <WrapperScore>
         <Title>Your best score:</Title>
-        <Score>0000</Score>
+        <Score>{(`0000${bestScore}`).slice(-4)}</Score>
       </WrapperScore>
       <Divider></Divider>
       <WrapperPlayer>
