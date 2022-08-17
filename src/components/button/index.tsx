@@ -6,21 +6,23 @@ interface Iprops {
   collor?: string;
   onclick?: () => void;
   disabled?: boolean;
+  value?: string;
+  type?: string;
 }
 
-const Button: React.FC<Iprops> = ({ text, collor, onclick, disabled }) => {
+const Button: React.FC<Iprops> = ({ text, collor, onclick, value, disabled }) => {
 
   return (
     <>
       {collor === "yellow" ? (
         <Wrapperbutton>
-        <SecundaryStyledButton type="primary" size="large" onClick={onclick} disabled={disabled}>
+        <SecundaryStyledButton type="primary" size="large" onClick={onclick} value={value} disabled={disabled}>
           {text}
         </SecundaryStyledButton>
         </Wrapperbutton>
       ) : (
         <Wrapperbutton>
-        <StyledButton type="primary" size="large" onClick={onclick}>
+        <StyledButton type="primary" size="large" onClick={onclick} value={value}>
           {text}
         </StyledButton>
         </Wrapperbutton>

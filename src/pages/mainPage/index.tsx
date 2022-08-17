@@ -3,7 +3,7 @@ import {
   Main,
   Title,
   Background,
-  Wrapperbutton,
+  WrapperButton,
   WrapperPainel,
   WrapperContent,
 } from "./styles";
@@ -33,7 +33,7 @@ const MainPage = () => {
       <Background src={backgroundImage} />
       <Title src={logo} />
       <WrapperContent>
-        <Wrapperbutton>
+        <WrapperButton>
           <Button
             text="Choose your Player"
             onclick={() => setDisplayPlayerModal(!displayPlayerModal)}
@@ -46,16 +46,16 @@ const MainPage = () => {
               navigate("/game");
             }}
           />
-        </Wrapperbutton>
+        </WrapperButton>
         <WrapperPainel>
           <Painel />
         </WrapperPainel>
-        <Wrapperbutton>
+        <WrapperButton>
           <Button
             text="Ranking"
             onclick={() => setDisplayRankingModal(!displayRankingModal)}
           />
-        </Wrapperbutton>
+        </WrapperButton>
       </WrapperContent>
       {displayPlayerModal ? (
         <PlayerModal

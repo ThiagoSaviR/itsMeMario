@@ -2,8 +2,15 @@ import styled from "styled-components";
 
 export const WrapperContent = styled.div``;
 
-export const Wrapperbutton = styled.div`
+export const WrapperButton = styled.div`
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const WrapperButtons = styled.div`
+   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

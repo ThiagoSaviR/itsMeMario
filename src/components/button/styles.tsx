@@ -9,6 +9,7 @@ export const StyledButton: React.FC<ButtonProps> = styled(Button)`
   align-items: center;
   margin: 1rem;
   border-radius: 5rem;
+  border: none;
   font-size: 1rem;
 `;
 

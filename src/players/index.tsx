@@ -2,7 +2,7 @@ import Mario from "../assets/img/mariohead.png";
 import MarioGif from "../assets/img/mario-gif.gif";
 import Yoshi from "../assets/img/yoshihead.png";
 import YoshiGif from "../assets/img/yoshi-gif.gif";
-import MarioGameOver from "../assets/img/game-over.png";
+import MarioDead from "../assets/img/marioDead.png";
 
 export const PLAYERS = [
     {
@@ -10,7 +10,7 @@ export const PLAYERS = [
         name: "Mario",
         image: Mario,
         gif: MarioGif,
-        gameOver: MarioGameOver,
+        gameOver: MarioDead,
     },
     {
         id: 2,

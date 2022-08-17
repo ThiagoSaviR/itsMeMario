@@ -39,12 +39,12 @@ export const PlayerAnimation = keyframes`
   }
 `;
 export const Player = styled.img`
-    width: 8.125rem;
-    position: absolute;
-    top: 368px;
-    left: 3rem;
-    animation:${props => props.animation} 600ms ease-out;
-    z-index: 2;
+  width: 8.125rem;
+  position: absolute;
+  top: 368px;
+  left: 3rem;
+  animation:${props => props.animation} 600ms ease-out;
+  z-index: 2;
 `;
 
 export const Score = styled.p`
@@ -57,4 +57,20 @@ export const Score = styled.p`
   z-index: 2;
   text-align: center;
 `;
+
+const cloudAnimation = keyframes`
+  from {
+    right: -18rem;
+  }
+
+  to {
+    right: 100%;
+  }
+`;
+export const Cloud = styled.img`
+  position: absolute;
+  width: 18rem;
+  top: 5rem; 
+  animation: ${cloudAnimation} 25s linear infinite;
+  `;
 
