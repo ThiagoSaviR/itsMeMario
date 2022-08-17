@@ -1,10 +1,30 @@
 import styled, { keyframes } from "styled-components";
 
+export const WrapperPage = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f5f5f5;
+  overflow: hidden;
+`;
+
+export const Background = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+`;
+
 export const GameBoard = styled.div`
   width: 80%;
+  
   height: 31.25rem;
-  border: 1px solid #333;
-  margin: 0 auto;
+  border: 0.5rem solid #22972c;
+  border-radius: 1.5rem;
   position: relative;
   overflow: hidden;
   background:linear-gradient(#87CEEb, #E0F6FF);

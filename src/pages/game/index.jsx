@@ -1,8 +1,11 @@
 import { useState, useRef } from 'react';
-import { GameBoard, Pipe, PlayerAnimation, Player, Score, Cloud } from "./styles";
+import { GameBoard, Pipe, PlayerAnimation, Player, Score, Cloud, WrapperPage, Background } from "./styles";
 
+import backgroundImage from "../../assets/img/backgroundGame.jpg";
 import pipe from "../../assets/img/pipe.png";
 import cloud from "../../assets/img/clouds.png";
+
+
 import { usePlayerContext } from "../../contexts/playerContext";
 import { useScoreContext } from "../../contexts/scoreContext";
 import SaveScoreModal from "../../components/modals/GameOverModal";
@@ -65,17 +68,21 @@ const Game = () => {
   
   return (
     <>
-    <GameBoard>
-      <Score>{(`0000${dataScore}`).slice(-4)}</Score>
-      <Cloud src={cloud} />
+    <WrapperPage>
+    <Background src={backgroundImage} />
+      <GameBoard>
+        <Score>{(`0000${dataScore}`).slice(-4)}</Score>
+        <Cloud src={cloud} />
 
-      {jump? (
-        <Player ref={playerRef} src={data.gif} animation={PlayerAnimation} />
-      ): (
-        <Player ref={playerRef} src={data.gif} />
-      )}
-      <Pipe ref={pipeRef} className="pipe" src={pipe} alt="Pipe" />
-    </GameBoard>
+        {jump? (
+          <Player ref={playerRef} src={data.gif} animation={PlayerAnimation} />
+        ): (
+          <Player ref={playerRef} src={data.gif} />
+        )}
+        <Pipe ref={pipeRef} className="pipe" src={pipe} alt="Pipe" />
+      </GameBoard>
+
+    </WrapperPage>
     {gameOver && <SaveScoreModal />}
     </>
   );
