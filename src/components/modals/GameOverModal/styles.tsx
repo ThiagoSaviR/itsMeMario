@@ -17,7 +17,7 @@ export const ModalContent = styled.div`
   position: relative;
   background-color: #f3f3f3;
   filter: drop-shadow(-10px 10px 10px rgba(0, 0, 0, 0.3));
-  border: 0.5rem solid #21dd3a;
+  border: 0.5rem solid #22972c;
   padding: 2rem 0;
   border-radius: 1rem;
   display: flex;

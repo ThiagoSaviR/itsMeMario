@@ -14,7 +14,7 @@ const Game = () => {
   const { data } = usePlayerContext();
   const [jump, setJump] = useState(false);
   const [gameOver, setGameOver] = useState(false);
-  const { dataScore, setDataScore } = useScoreContext();
+  const { dataScore, setDataScore, } = useScoreContext();
 
   document.addEventListener('keydown', (e) => {
     if (e.code === "Space") {
@@ -32,6 +32,21 @@ const Game = () => {
     clearInterval(points)
   
   }, 100);
+
+
+  const scoreCalc = ( point ) => {
+    window.localStorage.setItem('Local', JSON.stringify(point));
+    const local = Number(window.localStorage.getItem('Local'));
+    if (!localStorage.best) {
+      window.localStorage.setItem('best', JSON.stringify(local));
+    }
+    const best = Number(window.localStorage.getItem('best'));
+
+    if (local > best) {
+      window.localStorage.setItem('best', JSON.stringify(local));
+    }
+    
+  }
   
   const playerRef = useRef()
   const pipeRef = useRef();
@@ -51,6 +66,7 @@ const Game = () => {
         clearInterval(playGame)
         clearInterval(points)
         setGameOver(true);
+        scoreCalc(dataScore)
       } 
     }
     
@@ -62,6 +78,7 @@ const Game = () => {
         clearInterval(playGame)
         clearInterval(points)
         setGameOver(true);
+        scoreCalc(dataScore)
       }  
     }
   },1);

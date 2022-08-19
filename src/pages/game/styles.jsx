@@ -7,7 +7,6 @@ export const WrapperPage = styled.div`
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background-color: #f5f5f5;
   overflow: hidden;
 `;
 
@@ -23,7 +22,7 @@ export const GameBoard = styled.div`
   width: 80%;
   
   height: 31.25rem;
-  border: 0.5rem solid #22972c;
+  border: 1px solid #22972c;
   border-radius: 1.5rem;
   position: relative;
   overflow: hidden;
