@@ -41,7 +41,7 @@ const MainPage = () => {
           <Button
             text="PLAY!"
             collor="yellow"
-            disabled={data.gif? false : true}
+            disabled={data.id? false : true}
             onclick={() => {
               navigate("/game");
             }}

@@ -5,7 +5,6 @@ import backgroundImage from "../../assets/img/backgroundGame.jpg";
 import pipe from "../../assets/img/pipe.png";
 import cloud from "../../assets/img/clouds.png";
 
-
 import { usePlayerContext } from "../../contexts/playerContext";
 import { useScoreContext } from "../../contexts/scoreContext";
 import SaveScoreModal from "../../components/modals/GameOverModal";
@@ -30,9 +29,7 @@ const Game = () => {
   const points = setInterval(() => {;
     setDataScore(dataScore + 1);
     clearInterval(points)
-  
   }, 100);
-
 
   const scoreCalc = ( point ) => {
     window.localStorage.setItem('Local', JSON.stringify(point));
@@ -45,13 +42,10 @@ const Game = () => {
     if (local > best) {
       window.localStorage.setItem('best', JSON.stringify(local));
     }
-    
   }
   
   const playerRef = useRef()
   const pipeRef = useRef();
-  
-  
   
   const playGame = setInterval(() => {
     const jumpPlayer = playerRef.current.offsetTop;
@@ -85,22 +79,27 @@ const Game = () => {
   
   return (
     <>
-    <WrapperPage>
-    <Background src={backgroundImage} />
-      <GameBoard>
-        <Score>{(`0000${dataScore}`).slice(-4)}</Score>
-        <Cloud src={cloud} />
+      <WrapperPage>
+      <Background src={backgroundImage} />
+        <GameBoard>
+          <Score>{(`0000${dataScore}`).slice(-4)}</Score>
+          <Cloud src={cloud} />
+          {
+            jump? (
+              <Player ref={playerRef} src={data.gif} animation={PlayerAnimation} />
+            ): (
+              <Player ref={playerRef} src={data.gif} />
+            )
+          }
+          <Pipe
+          ref={pipeRef}
+          className="pipe"
+          src={pipe}
+          alt="Pipe" />
+        </GameBoard>
 
-        {jump? (
-          <Player ref={playerRef} src={data.gif} animation={PlayerAnimation} />
-        ): (
-          <Player ref={playerRef} src={data.gif} />
-        )}
-        <Pipe ref={pipeRef} className="pipe" src={pipe} alt="Pipe" />
-      </GameBoard>
-
-    </WrapperPage>
-    {gameOver && <SaveScoreModal />}
+      </WrapperPage>
+      {gameOver && <SaveScoreModal />}
     </>
   );
 };
