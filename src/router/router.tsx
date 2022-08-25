@@ -5,14 +5,17 @@ import Game from "../pages/game";
 import { usePlayerContext } from "../contexts/playerContext";
 
 const Router = () => {
-    const { data } = usePlayerContext();
+  const { data } = usePlayerContext();
 
   return (
     <Routes>
       <Route path="/" element={<MainPage />} />
-      <Route path="/game" element={ !data.id ? <Navigate to="/" /> : <Game />}>
-
-      </Route>
+      <Route path="/game" 
+      element={ 
+        !data.id ? 
+        <Navigate to="/" /> : 
+        <Game />} 
+      />
     </Routes>
   );
 };

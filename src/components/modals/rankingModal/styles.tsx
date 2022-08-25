@@ -14,6 +14,7 @@ export const MainModal = styled.div`
 `;
 
 export const ModalContent = styled.div`
+  width: 500px;
   position: relative;
   background-color: #f3f3f3;
   filter: drop-shadow(-10px 10px 10px rgba(0, 0, 0, 0.3));
@@ -41,5 +42,23 @@ export const CloseModal = styled.img`
 
 export const Title = styled.img`
   width: 60%;
+  margin-bottom: 20px;
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
 `;
+
+export const WrapperContent = styled.div`
+  width: 100%;
+`;
+export const WrapperUser = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 70px;
+
+`;
+export const UserPosition = styled.h1`
+  color: #ddbb21;
+`;
+export const UserName = styled.h1``;
+export const UserPoints = styled.h1`
+ color: #ddbb21;`;
+

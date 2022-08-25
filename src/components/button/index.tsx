@@ -2,21 +2,20 @@ import React from "react";
 import { StyledButton, SecundaryStyledButton, Wrapperbutton, } from "./styles";
 
 interface Iprops {
-  text: string;
   collor?: string;
-  onclick?: () => void;
-  disabled?: boolean;
   value?: string;
-  type?: string;
+  disabled?: boolean;
+  text: string
+  onclick?: () => void;
 }
 
-const Button: React.FC<Iprops> = ({ text, collor, onclick, value, disabled }) => {
+const Button: React.FC<Iprops> = ({collor, onclick, value, disabled, text}) => {
 
   return (
     <>
       {collor === "yellow" ? (
         <Wrapperbutton>
-        <SecundaryStyledButton type="primary" size="large" onClick={onclick} value={value} disabled={disabled}>
+        <SecundaryStyledButton type="primary" htmlType="submit" size="large" onClick={onclick} value={value} disabled={disabled}>
           {text}
         </SecundaryStyledButton>
         </Wrapperbutton>

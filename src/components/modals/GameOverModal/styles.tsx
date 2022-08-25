@@ -43,7 +43,7 @@ export const Span = styled.span`
 `;
 
 export const Input = styled.input`
-  width: 100%;
+  width: 50%;
   height: 2rem;
   border-radius: 1rem;
   border: none;
@@ -55,8 +55,9 @@ export const Input = styled.input`
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
 `;
 export const Form = styled.form`
-  width: 95%;
   display: flex;
+  width: 100%;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 1rem;

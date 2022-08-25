@@ -2,15 +2,14 @@ import firebase  from "firebase";
  
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC73_BRO5jM6410MankxdXROEDcQELicU4",
-  authDomain: "supermariojumprcrud.firebaseapp.com",
-  databaseURL: "https://supermariojumprcrud-default-rtdb.firebaseio.com",
-  projectId: "supermariojumprcrud",
-  storageBucket: "supermariojumprcrud.appspot.com",
-  messagingSenderId: "276333432728",
-  appId: "1:276333432728:web:ab7884e198d0495ad9a5ed"
+    apiKey: "AIzaSyDniwjYZRH8oJWRqT_dprW72YqcWBSEDgI",
+    authDomain: "mariojump-18754.firebaseapp.com",
+    projectId: "mariojump-18754",
+    storageBucket: "mariojump-18754.appspot.com",
+    messagingSenderId: "537798532510",
+    appId: "1:537798532510:web:3666016bb4b211d0554a8f"
 };
 
 const fireDb = firebase.initializeApp(firebaseConfig);
 
-export default fireDb;
+export default fireDb.database().ref();

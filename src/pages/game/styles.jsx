@@ -20,13 +20,13 @@ export const Background = styled.img`
 
 export const GameBoard = styled.div`
   width: 80%;
-  
   height: 31.25rem;
   border: 1px solid #22972c;
   border-radius: 1.5rem;
   position: relative;
   overflow: hidden;
   background:linear-gradient(#87CEEb, #E0F6FF);
+  filter: drop-shadow(5px 5px 5px #2f302f);
 `;
 
 const pipeAnimation = keyframes`
