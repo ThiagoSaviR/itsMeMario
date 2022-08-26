@@ -28,7 +28,7 @@ const GameOverModal = () => {
 
   const [values, setValues] = useState(initialValues);
 
-  const handlechange = (e) => {
+  const handlechange = (e: any) => {
     const { name, value } = e.target;
       setValues({ 
         ...values, 
@@ -36,7 +36,7 @@ const GameOverModal = () => {
     });
   }
 
-  const onSubmit = (event) => {
+  const onSubmit = (event: any) => {
     event.preventDefault();
     addToRanking(values);
   }
@@ -67,7 +67,6 @@ const GameOverModal = () => {
               }}
             />
             <Button
-              type="submit"
               text="Save"
               collor="yellow"
               onclick={() => {
