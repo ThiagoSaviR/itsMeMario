@@ -50,15 +50,22 @@ export const WrapperContent = styled.div`
   width: 100%;
 `;
 export const WrapperUser = styled.div`
+  border: 0.3rem solid #22972c;
+  border-radius: 32px;
+  padding: 0 1.5rem;
   display: flex;
-  justify-content: space-between;
-  margin: 10px 70px;
+  align-items: center;
+  justify-content: space-between ;
+  margin: 10px 50px;
 
 `;
 export const UserPosition = styled.h1`
   color: #ddbb21;
+  margin: 0;
 `;
-export const UserName = styled.h1``;
+export const UserName = styled.h1`
+margin: 0;
+`;
 export const UserPoints = styled.h1`
+margin: 0;
  color: #ddbb21;`;
-
