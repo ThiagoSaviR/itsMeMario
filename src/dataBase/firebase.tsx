@@ -2,13 +2,13 @@ import firebase from 'firebase/app';
 import 'firebase/database';
  
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_API_KEY,
-    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-    databaseURL: process.env.REACT_APP_DATABASE_URL,
-    projectId: process.env.REACT_APP_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-    appId: process.env.REACT_APP_APP_ID
+    apiKey: "AIzaSyDniwjYZRH8oJWRqT_dprW72YqcWBSEDgI",
+    authDomain: "mariojump-18754.firebaseapp.com",
+    databaseURL: "https://mariojump-18754-default-rtdb.firebaseio.com/",
+    projectId: "mariojump-18754",
+    storageBucket: "mariojump-18754.appspot.com",
+    messagingSenderId: "537798532510",
+    appId: "1:537798532510:web:3666016bb4b211d0554a8f"
 }
 
 const fireDb = firebase.initializeApp(firebaseConfig);
